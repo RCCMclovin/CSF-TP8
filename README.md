@@ -9,7 +9,7 @@ Neste exercício, vamos testar a comunicação Bluetooth utilizando os códigos 
 	- Certifique-se de que os dispositivos Bluetooth estejam corretamente emparelhados.
 	- Teste de Envio e Recepção:
 		> Envie mensagens usando o código de exemplo.
-		> Utilize o aplicativo móvel NRF Connect para monitorar o RSSI (Received Signal Strength Indicator) durante a comunicação.
+		> Utilize o aplicativo NRF Connect para monitorar o RSSI (Received Signal Strength Indicator) durante a comunicação.
 	- Anpalise de Dados:
 		> Anote os valores de RSSI recebidos pelo NRF Connect e anote a distância
 		> Monte a curva de perda no espaço livre utilizando os valores de RSSI anotados.
@@ -18,10 +18,9 @@ Neste exercício, vamos testar a comunicação Bluetooth utilizando os códigos 
 	- Curva de Perda no Espaço Livre:
 		> Utilize os valores de RSSI anotados para montar a curva de perda no espaço livre.
 		> Compare os valores teóricos de perda no espaço livre com os valores medidos.
-Impacto da Distância no RSSI:
+	- Impacto da Distância no RSSI:
 		> Como a variação da distância entre os dispositivos Bluetooth afeta o RSSI?
 		> Como a potência de transmissão afetou a qualidade da comunicação? Aquela configurada em:
 		
-		`esp_power_level_t lst[] = {ESP_PWR_LVL_N11, ESP_PWR_LVL_N9, ESP_PWR_LVL_N6, ESP_PWR_LVL_N3, ESP_PWR_LVL_N0, ESP_PWR_LVL_P3, ESP_PWR_LVL_P6, ESP_PWR_LVL_P9};
-`
+		`esp_power_level_t lst[] = {ESP_PWR_LVL_N11, ESP_PWR_LVL_N9, ESP_PWR_LVL_N6, ESP_PWR_LVL_N3, ESP_PWR_LVL_N0, ESP_PWR_LVL_P3, ESP_PWR_LVL_P6, ESP_PWR_LVL_P9};`
 `BLEDevice::setPower(lst[0]);`

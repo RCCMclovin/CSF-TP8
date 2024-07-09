@@ -23,4 +23,5 @@ Neste exercício, vamos testar a comunicação Bluetooth utilizando os códigos 
 		> Como a potência de transmissão afetou a qualidade da comunicação? Aquela configurada em:
 		
 		`esp_power_level_t lst[] = {ESP_PWR_LVL_N11, ESP_PWR_LVL_N9, ESP_PWR_LVL_N6, ESP_PWR_LVL_N3, ESP_PWR_LVL_N0, ESP_PWR_LVL_P3, ESP_PWR_LVL_P6, ESP_PWR_LVL_P9};`
-`BLEDevice::setPower(lst[0]);`
+
+		`BLEDevice::setPower(lst[0]);`

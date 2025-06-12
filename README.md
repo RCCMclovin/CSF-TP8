@@ -1,27 +1,37 @@
 # CSF-TP8
 
-Neste exercício, vamos testar a comunicação Bluetooth utilizando os códigos disponíveis no repositório git específico. O objetivo é analisar o RSSI e montar a curva de perda no espaço livre.
+Neste trabalho não será fornecido nenhum código, podem usar os códigos fornecidos em aulas anteriores e em exemplos na Arduino IDE.
 
-- Passos para o Experimento:
-	- Configuração do Ambiente:
-		> Faça o download dos códigos disponíveis no repositório git.
-	- Utilize o código fornecido para iniciar a comunicação Bluetooth.
-	- Certifique-se de que os dispositivos Bluetooth estejam corretamente emparelhados.
-	- Teste de Envio e Recepção:
-		> Envie mensagens usando o código de exemplo.
-		> Utilize o aplicativo NRF Connect para monitorar o RSSI (Received Signal Strength Indicator) durante a comunicação.
-	- Anpalise de Dados:
-		> Anote os valores de RSSI recebidos pelo NRF Connect e anote a distância
-		> Monte a curva de perda no espaço livre utilizando os valores de RSSI anotados.
+## Objetivo
 
-- Perguntas a Responder:
-	- Curva de Perda no Espaço Livre:
-		> Utilize os valores de RSSI anotados para montar a curva de perda no espaço livre.
-		> Compare os valores teóricos de perda no espaço livre com os valores medidos.
-	- Impacto da Distância no RSSI:
-		> Como a variação da distância entre os dispositivos Bluetooth afeta o RSSI?
-		> Como a potência de transmissão afetou a qualidade da comunicação? Aquela configurada em:
-		
-		`esp_power_level_t lst[] = {ESP_PWR_LVL_N11, ESP_PWR_LVL_N9, ESP_PWR_LVL_N6, ESP_PWR_LVL_N3, ESP_PWR_LVL_N0, ESP_PWR_LVL_P3, ESP_PWR_LVL_P6, ESP_PWR_LVL_P9};`
+Caracterizar experimentalmente o canal sem fio para tecnologias sem fio (Wi-Fi, LoRa e BLE) em dois ambientes distintos.
 
-		`BLEDevice::setPower(lst[0]);`
+### Objetivos específicos
+
+* Estimar o expoente de perda do percurso (n) para cada tecnologia em cada ambiente;
+
+* Observar e comparar o alcance prático e a robustez de cada tecnologia;
+
+* Analisar o impacto com linha de visada (LoS) e sem linha de visada (NLoS);
+
+## Testes
+
+* **Ambiente 1 (Interno - LoS e NLoS):** Um corredor longo do prédio do IComp. Tentem obter medições com linha de visada direta e também com alguns obstáculos (ex: uma pessoa no caminho, uma porta semiaberta, uma curva no corredor).
+
+* **Ambiente 2 (Externo - LoS):** Uma área aberta no campus, como o estacionamento ou o Centro de Convivência, com o mínimo de obstáculos possível para garantir linha de visada em distâncias maiores.
+
+## Discussão
+
+O relatório produzido deve:
+
+* Comparar os valores de 'n' obtidos para Wi-Fi, LoRa e BLE nos diferentes ambientes (interno LoS, interno NLoS, externo LoS).
+
+* Discutir como 'n' varia com a frequência da tecnologia e com as características do ambiente. (Tipicamente, n≈2 em espaço livre, >2 em ambientes com obstruções).
+
+* Analisar os gráficos de PDR vs. distância. Qual tecnologia teve maior alcance para um PDR aceitável (ex: >90%)?
+
+* Discutir o impacto de LoS vs. NLoS.
+
+### Mais informações
+
+Leiam atentamente o enunciado completo no arquivo "ICC304 CsF Aula Pratica 08 Caracterizacao do canal.pdf" para a descrição dos experimentos a serem realizados e os materiais necessários.
